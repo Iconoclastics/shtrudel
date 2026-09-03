@@ -1,3 +1,3 @@
-function showMessage() {
-    alert("Ты нажал на кнопку!");
+function changeText() {
+    document.getElementById("text").textContent = "Ты только что изменил сайт с помощью JavaScript!";
 }
