@@ -156,3 +156,7 @@ html {
 .section {
     scroll-margin-top: 30px;
 }
+.sidebar a.active {
+    background: #2a2a2a;
+    transform: translateX(5px);
+}
