@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,33 @@
 </head>
 
 <body>
-<nav class="sidebar">
-    <a href="#home">Главная</a>
-    <a href="#about">О сайте</a>
-    <a href="#contact">Контакты</a>
-</nav>
-    <div class="container" id="home">
-        <h1>Добро пожаловать!</h1>
 
-        <p id="text">Это мой первый сайт на GitHub.</p>
+    <!-- Боковое меню -->
+    <nav class="sidebar">
+        <h2>Мой сайт</h2>
 
-        <button onclick="changeText()">Нажми меня</button>
-    </div>
-      <script src="script.js"></script>
+        <a href="#home">Главная</a>
+        <a href="#about">О сайте</a>
+        <a href="#contact">Контакты</a>
+        <a href="#settings">Настройки</a>
+    </nav>
+
+    <!-- Основная часть сайта -->
+    <main class="content">
+
+        <div class="container" id="home">
+            <h1>Добро пожаловать!</h1>
+
+            <p id="text">
+                Это мой первый сайт на GitHub.
+            </p>
+
+            <button onclick="changeText()">Нажми меня</button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
