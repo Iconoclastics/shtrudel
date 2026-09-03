@@ -10,17 +10,35 @@ function changeText() {
 }
 
 
+// Получаем все разделы и кнопки меню
+const sections = document.querySelectorAll(".container");
 const menuLinks = document.querySelectorAll(".sidebar a");
 
-menuLinks.forEach(function(link) {
 
-    link.addEventListener("click", function() {
+// Следим за прокруткой страницы
+window.addEventListener("scroll", function() {
 
-        menuLinks.forEach(function(item) {
-            item.classList.remove("active");
-        });
+    let currentSection = "";
 
-        this.classList.add("active");
+    sections.forEach(function(section) {
+
+        const sectionTop = section.offsetTop;
+
+        if (window.scrollY >= sectionTop - 200) {
+            currentSection = section.getAttribute("id");
+        }
+
+    });
+
+
+    // Меняем активную кнопку
+    menuLinks.forEach(function(link) {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + currentSection) {
+            link.classList.add("active");
+        }
 
     });
 
